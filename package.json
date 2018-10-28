@@ -1,11 +1,12 @@
 {
-  "name": "electron_hello",
+  "name": "electron_clipfmt",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "photon": "git+https://github.com/connors/photon.git"
   }
 }
