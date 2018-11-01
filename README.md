@@ -1,4 +1,5 @@
 # electron_clipfmt
+[![Build Status](https://travis-ci.com/0xShone/electron_clipfmt.svg?branch=master)](https://travis-ci.com/0xShone/electron_clipfmt)
 
 ## About this
 *Watching clipboard* and *Converting* `full-width letter` -> `half-width letter`
