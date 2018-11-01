@@ -1,16 +1,10 @@
 language: node_js
 sudo: false
+node_js:
+  - "8.4.0"
 cache:
   directories:
     - node_modules
-env:
-  - NODE_VERSION="8.4.0"
-before_install:
-  - git clone https://github.com/creationix/nvm.git /tmp/.nvm
-  - source /tmp/.nvm/nvm.sh
-  - nvm install $NODE_VERSION
-  - nvm use --delete-prefix $NODE_VERSION
-  - node --version
 install:
   - npm install
 script:
