@@ -5,7 +5,11 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "webpack",
+    "test": "echo \"Warning: no test specified\"",
+    "clean": "rm -rf app app.zip",
+    "pack": "npm run clean && electron-packager . clipfmt --out=app --platform=darwin,win32 --arch=x64",
+    "build": "webpack . && npm run pack",
+    "archive": "npm run build && zip -r app.zip app && rm -rf app",
     "watch": "webpack --watch"
   },
   "keywords": [],
