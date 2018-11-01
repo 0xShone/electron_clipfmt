@@ -1,4 +1,5 @@
-language: objective-c
+language: node_js
+sudo:false
 cache:
   directories:
     - node_modules
@@ -14,20 +15,3 @@ install:
   - npm install
 script:
   - npm test
-before_deploy:
-  - brew update
-  - brew install wine
-  - wine --version
-  - brew install makensis
-  - npm run archive
-deploy:
-  provider: releases
-  api_key:
-    secure: rHkNMAOFTOXoE2aiNw6YTOmfJUEE0Hk3PbljK0caHKlI0V/0J+cXbWDAn/+8key6DITVYAaRvpBNx5pI5SMibEaUPah1E5fPzSdHdcmpVO4FlPDyA/b4SSxXGittGKf3GrqdkgNNVI/oY4KuzFVU3ZXJTPbgRC858LlU0J9ni01GZ8Y1q2SKSOu4LAwHExbG4vHN9ysAVCr3+sCt56omQJFSOSxzwXhD7UtczYpreP3E0lQggfy5UtgTqvSlEM+ZOZOSX8DKltJx4fTV9ACt0HoYUdeIsCXq5JZVGT4hb6WFXV7wqkmbh3jXVh9TQ3jJVfaw/lRwrdiudd6K/2QY4tC79XoOKwitYGQ9td0y1CYgyBfjZG/PJ+X2n2ndKarUwZJeDnJ94j+Nco0q4esUZXjkhMvlftFOHa1uLMgfatElHKiao7zIlWdcyUkSJaT71cTOrgM2EBhWSE2OiP5UDzv3OEKHCFoUeoPAYap6s4vamacK/yW/JxTkOuqlaj6vWLTbxNAXjwOA5T6wisVbri7+LVUIAupi2nEt3DO7nk+nZ8be5bZgGnXmps7VUfLlk7mM9JOYYVjWlOAoChNp2OwJkXgIRfjLM7xtwXaV3S/mtbr85+jl//BogOdLLs1w/CWhBhbz4wWeincFugXLcqwWDUepA6mHW/gbAFxs7OA=
-  file:
-    - app.zip
-  skip_cleanup: true
-  on:
-    repo: 0xShone/electron_clipfmt
-    tags: true
-    all_branches: true
